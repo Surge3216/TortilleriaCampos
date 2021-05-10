@@ -5,7 +5,7 @@ function Story() {
     return (
         <div>
             <Carousel/>
-            <p>fasdfdsfdsv dfdsfdsfdsdsfd</p>
+            <p>hjghkl kj;j;</p>
         </div>
     )
 }
