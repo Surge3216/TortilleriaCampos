@@ -47,7 +47,16 @@ export class Navbar extends Component {
                 Login
             </Link>
           </li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <Link
+              to="/contact"
+              className = {
+                window.location.pathname === "/contact"
+                ? "nav-link active"
+                : "nav-link"}>
+                  Contact Us               
+            </Link>
+           </li>
         </ul>
       </div>
     </div>
