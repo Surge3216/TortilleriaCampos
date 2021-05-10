@@ -12,7 +12,7 @@ export class Navbar extends Component {
       var elems = document.querySelectorAll('.sidenav');
       var instances = M.Sidenav.init(elems, {});
     });
-  }
+  };
 
   render(){
     return(
@@ -27,8 +27,26 @@ export class Navbar extends Component {
         <a href="#" class="brand-logo">Tortilleria Campos</a>
       
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Story</a></li>
-          <li><Link to="/login" className = {window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>Login</Link></li>
+          <li>
+            <Link 
+              to="/" 
+              className = {
+              window.location.pathname === "/" || window.location.pathname === "/story"
+              ? "nav-link active"
+               : "nave-link"} >
+                 Story
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/login" 
+              className = {
+              window.location.pathname === "/login" 
+              ? "nav-link active" 
+              : "nav-link"}>
+                Login
+            </Link>
+          </li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
