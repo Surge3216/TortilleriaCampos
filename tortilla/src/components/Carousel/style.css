@@ -1,7 +1,16 @@
-.carousel .carousel-item {
-    width:600px !important;
+
+
+/* .carousel-item {
+    width:900px !important;
     height: auto !important;
     padding-bottom: 20px !important;
-    padding-top: 20px !important;
+} */
+
+.hero{
+
 }
 
+.imagebox{
+height: 100px;
+width: auto;
+}

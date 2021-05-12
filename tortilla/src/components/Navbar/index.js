@@ -17,8 +17,8 @@ export class Navbar extends Component {
   render(){
     return(
   <div>
-  <nav>
-    <div class="nav-wrapper red">
+  {/* <nav class="bar">
+    <div class="nav-wrapper">
 
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
 
@@ -60,18 +60,47 @@ export class Navbar extends Component {
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> */}
 
-  <ul id="slide-out" class="sidenav green">
+  <ul id="nav-mobile" class="sidenav panel sidenav-fixed">
     <li><div class="user-view">
-      <div class="background">
-        <img src= ".\assets" />
+      <div>
+        <h4 className="center-align">Tortilleria Campos</h4>
       </div>
-      <a href="#name"><span class="white-text name">User Name</span></a>
-      <a href="#email"><span class="white-text email">User@email.com</span></a>
+
     </div></li>
+            <li>
+            <Link 
+              to="/" 
+              className = {
+              window.location.pathname === "/" || window.location.pathname === "/story"
+              ? "nav-link active"
+               : "nave-link"} >
+                 Story
+            </Link>
+            </li>
+            <li>
+            <Link 
+              to="/login" 
+              className = {
+              window.location.pathname === "/login" 
+              ? "nav-link active" 
+              : "nav-link"}>
+                Login
+            </Link>
+          </li>
+            <li>
+            <Link
+              to="/contact"
+              className = {
+                window.location.pathname === "/contact"
+                ? "nav-link active"
+                : "nav-link"}>
+                  Contact Us               
+            </Link>
+           </li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
+    <li><a href="#name"><span class="white-text name subheader">User Name</span></a></li>
     <li><a class="waves-effect" href="#!">Main Page</a></li>
     <li><a class="waves-effect" href="#!">Deliveries Out</a></li>
     <li><a class="waves-effect" href="#!">New Client</a></li>
