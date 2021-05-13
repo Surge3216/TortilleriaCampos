@@ -65,7 +65,7 @@ export class Navbar extends Component {
   <ul id="nav-mobile" class="sidenav panel sidenav-fixed">
     <li><div class="user-view">
       <div>
-        <h4 className="center-align">Tortilleria Campos</h4>
+        <h5 className="center-align">Tortilleria Campos</h5>
       </div>
 
     </div></li>

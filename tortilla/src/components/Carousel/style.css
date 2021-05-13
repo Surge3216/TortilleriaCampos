@@ -1,16 +1,4 @@
-
-
-/* .carousel-item {
-    width:900px !important;
-    height: auto !important;
-    padding-bottom: 20px !important;
-} */
-
-.hero{
-
-}
-
-.imagebox{
-height: 100px;
-width: auto;
+.mainImg{
+width: 900px !important;
+height: 500px !important;
 }

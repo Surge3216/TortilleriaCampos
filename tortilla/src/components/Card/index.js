@@ -5,7 +5,7 @@ export class Card extends Component{
     render(){
         return(
         <div class="row login">
-            <div class="col l6 s12 m9 offset-m2 offset-l4 border">
+            <div class="col l4 s12 m9 offset-m2 offset-l5 border">
               <div class="card-panel teal white">
                     <div class="row">
                         <div>
