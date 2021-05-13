@@ -6,6 +6,8 @@ import Login from "./pages/Login"
 import Story from "./pages/Story"
 import Contact from "./pages/Contact";
 import Carousel from "./components/Carousel/index"
+import row from "./components/Row/index"
+import Row from "./components/Row/index";
 
 class App extends Component{
 
@@ -14,7 +16,11 @@ class App extends Component{
     <Router>
       <div>
         <Navbar />
+        <Row>
+          <div class="col l12 offset-l1">
         <Carousel />
+        </div>
+        </Row>
         <Route exact path="/" component={Story}/>
         <Route exact path="/story" component={Story} />
         <Route exact path="/login" component={Login} />
