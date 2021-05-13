@@ -2,8 +2,10 @@ const express = require('express');
 const express = require("express-session");
 
 // Sets up the Express App
-
-const PORT = process.env.PORT || 8080;
+const mongoose = require('mongoose');
+const routes = require('./routes');
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
 const db = require('./models');
@@ -12,8 +14,15 @@ const db = require('./models');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//Serve up static assets (usually on heroku)
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+//Add routes, both API and view
+app.use(routes);
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync({ force: true }).then(() => {
-  app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+  app.listen(PORT, () => 
+  console.log(`Listening on PORT ${PORT}`));
+

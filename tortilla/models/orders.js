@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
         userID: {
             type: DataTypes.INTEGER,
         },
-	orderStatus: {
+	    orderStatus: {
             type: DataTypes.STRING,
         },
         dateCreated: {
