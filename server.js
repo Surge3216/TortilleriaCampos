@@ -1,5 +1,4 @@
 const express = require('express');
-const express = require("express-session");
 
 // Sets up the Express App
 const mongoose = require('mongoose');
@@ -11,7 +10,6 @@ const PORT = process.env.PORT || 3001;
 const db = require('./models');
 
 // Sets up the Express app to handle data parsing
-const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //Serve up static assets (usually on heroku)

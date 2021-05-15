@@ -9,6 +9,7 @@ import Carousel from "./components/Carousel/index"
 import row from "./components/Row/index"
 import Row from "./components/Row/index";
 import DriversOrders from "./pages/DriversOrders"
+import NewClient from "./pages/NewClient.js"
 
 class App extends Component{
 
