@@ -1,5 +1,5 @@
 module.exports = {
   Orders:require("./orders"),
-  Customers:require("./customer"),
-  Users:require("./users")
+  Customer:require("./customer"),
+  User:require("./users")
 }

@@ -1,48 +1,46 @@
-module.exports = (sequelize, DataTypes) => {
-    const Customer = sequelize.define('Customer', {
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+    const customerSchema = new Schema({
         companyName: {
-            type: DataTypes.STRING,
+            type: String,
             allowNull: false,
         },
         contactName: {
-            type: DataTypes.STRING,
+            type: String,
             allowNull: false,
         },
         phoneNumber: {
-            type: DataTypes.STRING,
+            type: Number,
         },
         emailAddress: {
-            type: DataTypes.STRING,
+            type: String,
         },
         streetAddress: {
-            type: DataTypes.STRING,
+            type: Number,
         },
         streetAddressL2: {
-            type: DataTypes.STRING,
+            type: Number,
         },
         city: {
-            type: DataTypes.STRING,
+            type: String,
         },
         state: {
-            type: DataTypes.STRING,
+            type: String,
         },
         zipCode: {
-            type: DataTypes.INTEGER,
+            type: Number,
         },
 	relationshipStatus: {
-	    type: DataTypes.BOOLEAN,
+	    type: String,
+        trim: true,
 	},
 	customerNotes: {
-	    type: DataTypes.STRING,
-	},
+	    type: String,
+	}
     });
-    Customer.associate = (models) => {
-        // Associating customer with orders
-        // When a customer is deleted, also delete any associated orders
-        Customer.hasMany(models.Orders, {
-            onDelete: 'cascade',
-        });
-    };
 
-    return Customer;
-};
+    const Customer = mongoose.model("Customer", customerSchema);
+
+    module.exports = Customer;

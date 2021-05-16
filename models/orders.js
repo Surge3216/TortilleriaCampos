@@ -1,47 +1,42 @@
-module.exports = (sequelize, DataTypes) => {
-    const Orders = sequelize.define('Orders', {
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+    const ordersSchema = new Schema({
         userID: {
-            type: DataTypes.INTEGER,
+            type: Number,
         },
 	    orderStatus: {
-            type: DataTypes.STRING,
+            type: String,
         },
         dateCreated: {
-            type: DataTypes.DATE,
+            type: Date,
+            default: Date.now
         },
         deliveryDate: {
-            type: DataTypes.DATE,
+            type: Date,
         },
         dateClosed: {
-            type: DataTypes.DATE,
+            type: Date,
         },
         orderNotes: {
-            type: DataTypes.STRING,
+            type: String,
         },
         cornQuantity: {
-            type: DataTypes.INTEGER,
+            type: Number,
         },
         flourQuantity: {
-            type: DataTypes.STRING,
+            type: Number,
         },
         dueDate: {
-            type: DataTypes.DATE,
+            type: Date,
         },
         rate: {
-            type: DataTypes.DECIMAL,
-        },
+            type: Number,
+        }
 
     });
 
-    Orders.associate = (models) => {
-        // We're saying that a order should belong to an customer
-        // An order can't be created without an customer due to the foreign key constraint
-        Orders.belongsTo(models.Customer, {
-            foreignKey: {
-                allowNull: false,
-            },
-        });
-    };
+    const Orders = mongoose.model("Orders", ordersSchema);
 
-    return Orders;
-};
+    module.exports = Orders;
