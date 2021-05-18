@@ -16,11 +16,14 @@ app.use(express.json());
 if(process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tortilleria_campos", { useNewUrlParser: true });
+ 
 //Add routes, both API and view
 app.use(routes);
 
 // Syncing our sequelize models and then starting our express app
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
-  app.listen(PORT, () => 
-  console.log(`Listening on PORT ${PORT}`));
 
+
+app.listen(PORT, () => 
+console.log(`Listening on PORT ${PORT}`));
