@@ -1,6 +1,6 @@
 module.exports = {
   Orders:require("./orders"),
   Customer:require("./customer"),
-  User:require("./users"),
+  Employee:require("./employee")
   NewClient:require("./newclient")
 }
