@@ -10,6 +10,6 @@ router
     
     router.route('/')
     .post((req, res) => {
-        const user = new db.User(req.body);
+        const user = new db.user(req.body);
         user.save();
     })
