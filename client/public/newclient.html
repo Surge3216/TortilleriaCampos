@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <div class="jumbotron bg-primary text-white">
-    <h1 class="display-6 bg-primary text-white">Welcome to your one stop shop for anything tortilla.</h1>
+  <div class="jumbotron bg-danger text-white">
+    <h1 class="display-6 bg-danger text-white">Welcome to your one stop shop for anything tortilla.</h1>
     <p class="lead">Enter in your information below and we will get you started!</p>
     <hr class="my-4">
     <p>Already a user? Sign in here!</p>
@@ -21,21 +21,45 @@
   </div>
   <form>
     <div class="form-group">
-      <label for="emailAddress">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <label for="clientType">Personal or business?</label>
+      <input type="clientType" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Personal or business?">
 
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label for="clientName">Name</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Name">
     </div>
     <div class="form-group">
-        <label for="userName">User Name</label>
-        <input type="userName" class="form-control" id="exampleInputPassword1" placeholder="User Name">
+        <label for="clientNumber">Number</label>
+        <input type="clientNumber" class="form-control" id="exampleInputPassword1" placeholder="Number">
       </div>
       <div class="form-group">
-        <label for="businessName">Business name</label>
-        <input type="businessName" class="form-control" id="exampleInputPassword1" placeholder="Business name">
+        <label for="clientEmailAddress">Email Address</label>
+        <input type="clientEmailAddress" class="form-control" id="exampleInputPassword1" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <label for="clientStreetAddress">Street Address</label>
+        <input type="clientStreetAddress" class="form-control" id="exampleInputPassword1" placeholder="Street Address">
+      </div>
+      <div class="form-group">
+        <label for="clientCity">City</label>
+        <input type="clientCity" class="form-control" id="exampleInputPassword1" placeholder="City">
+      </div>
+      <div class="form-group">
+        <label for="clientState">State</label>
+        <input type="clientState" class="form-control" id="exampleInputPassword1" placeholder="State">
+      </div>
+      <div class="form-group">
+        <label for="clientZip">Zip Code</label>
+        <input type="clientZip" class="form-control" id="exampleInputPassword1" placeholder="Zip">
+      </div>
+      <div class="form-group">
+        <label for="clientStatus">Current Status</label>
+        <input type="clientStatus" class="form-control" id="exampleInputPassword1" placeholder="Status">
+      </div>
+      <div class="form-group">
+        <label for="clientNotes">Notes</label>
+        <input type="clientNotes" class="form-control" id="exampleInputPassword1" placeholder="Notes">
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
