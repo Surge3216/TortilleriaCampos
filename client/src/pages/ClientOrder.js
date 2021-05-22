@@ -1,9 +1,12 @@
 import React from 'react'
-
-export default function ClientOrder() {
+import Table from "../components/Table"
+import Row from "../components/Row/index"
+function Order() {
     return (
-        <div>
-            
-        </div>
+    <div>
+       <Table/>
+    </div>
     )
 }
+
+export default Order;

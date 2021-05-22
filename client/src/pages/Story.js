@@ -1,5 +1,4 @@
 import React from 'react';
-import Carousel from '../components/Carousel/index'
 import Row from '../components/Row/index';
 import Col from '../components/Col/index'
 

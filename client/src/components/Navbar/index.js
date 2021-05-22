@@ -104,7 +104,15 @@ export class Navbar extends Component {
     <li><a class="waves-effect" href="#!">Main Page</a></li>
     <li><a class="waves-effect" href="#!">Deliveries Out</a></li>
     <li><a class="waves-effect" href="#!">New Client</a></li>
-    <li><a class="waves-effect" href="#!">New Delivery</a></li>
+      <li>
+        <Link
+            to="/order"
+            className={window.location.pathname === "/clientorder"
+            ? "nav-link active"
+            : "nav-link"}>
+              New Order
+        </Link>
+      </li>
     <li><a class="waves-effect" href="#!">Add User</a></li>
   </ul>
 
