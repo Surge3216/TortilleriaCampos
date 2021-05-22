@@ -29,7 +29,32 @@ module.exports = {
         db.Employee
           .findById({ _id: req.params.id})
           .then(dbModel => dbModel.remove())
-          .then(dbModel => res.json(dbModel))
+          .then(dbModel =>res.json(dbModel))
           .catch(err => res.status(422).json(err))
+    },
+    login: function(req, res){
+        db.Employee
+        .findOne({emailAddress: req.body.email})
+        .then(dbModel => {
+            if (dbModel.password === req.body.password){
+                let tempObject = {
+                   authenicated:true,
+                   employeeName:dbModel.employeeName,
+                   employeeType:dbModel.employeeType
+                }
+                res.json(tempObject)
+            }
+            else {
+                let tempObject = {
+                    authenicated: false,
+                }
+                res.status(401).json(tempObject)
+            }
+            })        
+
+            
+        .catch(err => res.status(422).json(err))
+
     }
 }
+

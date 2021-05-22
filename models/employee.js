@@ -23,7 +23,7 @@ const Schema = mongoose.Schema;
             type: String,
             trim: true
         },
-	    employeeNotes: {
+	      employeeNotes: {
             type: String,
         }
     });
