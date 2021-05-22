@@ -12,7 +12,7 @@ passport.use(
     },
     (email, password, done) => {
       // When a user tries to sign in this code runs
-      db.Employee.find({email: email}).then(dbEmployee => {
+      db.Employee.find({emailAddress: email}).then(dbEmployee => {
         if (!dbEmployee) {
           return done(null, false, {
             message: "Incorrect email."
