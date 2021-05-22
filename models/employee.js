@@ -14,7 +14,7 @@ const Schema = mongoose.Schema;
             type: String,
         },
         phoneNumber: {
-            type: Number,
+            type: String,
         },
         emailAddress: {
             type: String,
