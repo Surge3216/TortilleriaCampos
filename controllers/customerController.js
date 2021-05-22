@@ -3,14 +3,13 @@ const db = require("../models/customer");
 module.exports = {
     findAll: function(req,res) {
         db.Customer
-         .find(req.query)
-         .sort({ date: -1})
+         .find()
          .then(dbModel => res.json(dbModel))
          .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) {
         db.Customer
-         .find({userID:req.params.id})
+         .find({_id:req.params.id})
          .then(dbModel => res.json(dbModel))
          .catch(err => res.status(422).json(err));
     },
