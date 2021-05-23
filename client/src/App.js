@@ -50,7 +50,7 @@ handleLogout= () =>{
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/driverorders" component={DriversOrders}/>
         <Route exact path="/order" component={Order}/>
-        
+        <Route exact path="/newClient" component={NewClient}/>
         <Footer />
       </div>
       </EmployeeContext.Provider>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import m from 'materialize-css/dist/js/materialize'
-export class Table extends Component {
+export class Table2 extends Component {
   componentDidMount(){
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('select');
@@ -14,7 +14,7 @@ export class Table extends Component {
 
       <div className="row">
         <div className="col l4 offset-l2">
-          <h3>New Order</h3>
+          <h3>Deliveries</h3>
         </div>
       </div>
 
@@ -24,28 +24,33 @@ export class Table extends Component {
           <table>
             <thead>
               <tr className="row">
-                <th>Quantity</th>
-                <th>Item Name</th>
-                <th>Item description</th>
-                <th>Price</th>
+                <th>Restaurant Name</th>
+                <th>Case count</th>
+                <th>address</th>
               </tr>
             </thead>
 
           <tbody>
             <tr>
-              <td>7</td>
+              <td>Los Cucos</td>
+              <td>32</td>
               <td>
-                  <div class="input-field col s12">
-                    <select>
-                      <option value="" disabled selected>Choose your option</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                  </div>
+                775 south 900 west, salt Lake city UT
               </td>                   
-              <td>description</td>
-              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Los Cucos</td>
+              <td>32</td>
+              <td>
+                775 south 900 west, salt Lake city UT
+              </td>                   
+            </tr>
+            <tr>
+              <td>Los Cucos</td>
+              <td>32</td>
+              <td>
+                775 south 900 west, salt Lake city UT
+              </td>                   
             </tr>
                 </tbody>
               </table>
@@ -65,4 +70,4 @@ export class Table extends Component {
     }
 };
 
-export default Table;
+export default Table2;

@@ -102,8 +102,26 @@ export class Navbar extends Component {
     <li><div class="divider"></div></li>
     <li><a href="#name"><span class="white-text name subheader">User Name</span></a></li>
     <li><a class="waves-effect" href="#!">Main Page</a></li>
-    <li><a class="waves-effect" href="#!">Deliveries Out</a></li>
-    <li><a class="waves-effect" href="#!">New Client</a></li>
+    <li>
+      <Link
+          to="/driverorders"
+          className={window.location.pathname === "/driverorders"
+          ? "nav-link active"
+          : "nav-link"}>
+            Deliveries Out
+        </Link>
+      </li>
+
+      <li>
+        <Link 
+        to="/newclient"
+        className={window.location.pathname === "/newclient"
+        ? "nav-link active"
+        : "nav-link"}>
+          New Client
+        </Link>
+      </li>
+      
       <li>
         <Link
             to="/order"
