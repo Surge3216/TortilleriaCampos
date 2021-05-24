@@ -7,7 +7,7 @@ function NewClient() {
 
             <Row/>                  
                     <div class="card-panel col l9 offset-l1 teal white">
-                    <form className="">
+                    <form className="" action="" method="POST" role="form">
                         <div className="row">
                         <div className=" input-field col l4 offset-l2">
                                 <input placeholder="Business Name" id="ClientName" type="text" class="validate "></input>
@@ -37,7 +37,7 @@ function NewClient() {
                         </div>
                         <div className="row">
                             <div class="col l1 offset-l9">
-                            <a class="waves-effect waves-light btn">Add</a>
+                            <a class="waves-effect waves-light btn" id="add-btn" >Add</a>
                             </div>
                         </div>
                     </form>
