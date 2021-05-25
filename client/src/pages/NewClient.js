@@ -1,7 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Row from '../components/Row/index'
 
 function NewClient() {
+    const [clients, setClients] = useState({
+        clientName: "",
+        clientEmailAddress: "",
+        clientNumber: 0,
+        clientType: "",
+        clientStreetAddress: "",
+        clientCity: "",
+        clientState: "",
+        clientZip: 0,
+    })
+
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+        setClients({...clients,[name]:value})
+
+    }
+
     return (
         <div>
 
@@ -10,28 +27,28 @@ function NewClient() {
                     <form className="" action="" method="POST" role="form">
                         <div className="row">
                         <div className=" input-field col l4 offset-l2">
-                                <input placeholder="Business Name" id="ClientName" type="text" class="validate "></input>
+                                <input onChange={handleInputChange} placeholder="Business Name" id="ClientName" name="clientName" type="text" class="validate "></input>
                             </div>
                             <div className=" input-field col l4 ">
-                                <input placeholder="Email" id="clientEmailAddress" type="text" class="validate "></input>
+                                <input onChange={handleInputChange}  placeholder="Email" id="clientEmailAddress" name="clientEmailAddress" type="text" class="validate "></input>
                             </div>
                             <div className=" input-field col l4 offset-l2">
-                                <input placeholder="Phone number" id="clientNumber" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="Phone number" id="clientNumber" name="clientNumber" type="text" class="validate "/>
                             </div>
                             <div className=" input-field col l4 ">
-                                <input placeholder="Busness type" id="clientType" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="Business type" id="clientType" name="clientType" type="text" class="validate "/>
                             </div>
                             <div className=" input-field col l4 offset-l2">
-                                <input placeholder="address" id="clientStreetAddress" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="address" id="clientStreetAddress" name="clientStreetAddress" type="text" class="validate "/>
                             </div>
                             <div className=" input-field col l2 ">
-                                <input placeholder="City" id="clientCity" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="City" name="clientCity" id="clientCity" type="text" class="validate "/>
                             </div>
                             <div className=" input-field col l1 ">
-                                <input placeholder="State" id="clientState" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="State" name="clientState" id="clientState" type="text" class="validate "/>
                             </div>
                             <div className=" input-field col l1 ">
-                                <input placeholder="Zip" id="clientZip" type="text" class="validate "/>
+                                <input onChange={handleInputChange} placeholder="Zip" name="clientZip" id="clientZip" type="text" class="validate "/>
                             </div>
 
                         </div>
