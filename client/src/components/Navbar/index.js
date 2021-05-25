@@ -125,13 +125,19 @@ export class Navbar extends Component {
       <li>
         <Link
             to="/order"
-            className={window.location.pathname === "/clientorder"
+            className={window.location.pathname === "/order"
             ? "nav-link active"
             : "nav-link"}>
               New Order
         </Link>
       </li>
-    <li><a class="waves-effect" href="#!">Add User</a></li>
+      <li>
+        <Link 
+            to="/addUser"
+            className={window.location.pathname === "/addUser"}>
+              Add User
+        </Link>
+      </li>
   </ul>
 
       </div>
