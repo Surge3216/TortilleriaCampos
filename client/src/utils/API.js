@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export defaut {
+export default {
 
     getOrders: function() {
         return axios.get("/api/orders/");
@@ -9,5 +9,9 @@ export defaut {
     getOrder: function(userID) {
         return axios.get("/api/orders/" + userID);
 
+    },
+
+    saveClient: function(clientData){
+        return axios.post("/api/newclient/", clientData)
     }
 };

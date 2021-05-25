@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Row from '../components/Row/index'
+import API from '../utils/API'
 
 function NewClient() {
     const [clients, setClients] = useState({
@@ -17,6 +18,11 @@ function NewClient() {
         const {name, value} = event.target;
         setClients({...clients,[name]:value})
 
+    }
+
+    const handleFormSubmit=(event)=>{
+        event.preventDefault()
+        API.saveClient(clients).then((res)=>console.log(res.data)).catch(err=> console.log(err))
     }
 
     return (
@@ -54,7 +60,7 @@ function NewClient() {
                         </div>
                         <div className="row">
                             <div class="col l1 offset-l9">
-                            <a class="waves-effect waves-light btn" id="add-btn" >Add</a>
+                            <button onClick={()=> handleFormSubmit(clients)} class="waves-effect waves-light btn" id="add-btn" >Add</button>
                             </div>
                         </div>
                     </form>
