@@ -23,4 +23,3 @@ export default function DriversOrders() {
       <h1>{driverOrders[0].orderNotes}</h1>
     </div>
   );
-}
