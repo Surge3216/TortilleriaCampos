@@ -2,21 +2,22 @@ import { set } from "mongoose";
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import Dropdown from "../components/Dropdown/index"
-export default function DriversOrders() {
+
+function DriversOrders() {
   const [driverOrders, setDriverOrders] = useState([
     {
       userID: 0,
-      orderStatus:"",
-      dueDate: "",
-      cornQuantity: 0,
-      flourQuantity: 0,
-      orderNotes: "",
+      orderStatus:"filled",
+      dueDate: "5/25/2021",
+      cornQuantity: 5,
+      flourQuantity: 2,
+      orderNotes: "call mary",
 
     },
   ]);
 
   useEffect(() => {
-    let userID = "example";
+    let userID = 0;
     API.getOrder(userID).then((res) => {
       setDriverOrders(res.data);
     });
@@ -24,13 +25,23 @@ export default function DriversOrders() {
 
   return (
     <div>
-      <Dropdown />
-      <h1>{driverOrders[0].userID}</h1>
-      <h1>{driverOrders[0].orderStatus}</h1>
-      <h1>{driverOrders[0].dueDate}</h1>
-      <h1>{driverOrders[0].cornQuantity}</h1>
-      <h1>{driverOrders[0].flourQuantity}</h1>
-      <h1>{driverOrders[0].orderNotes}</h1>
+        {/* <Dropdown/> */}
+      <div>
+          
+      {driverOrders.map(item => (
+        <div key= {item.userID}>
+            {console.log(item)}
+          <p> {item.userID}</p>
+          <p>{item.orderStatus}</p>
+          <p>{item.dueDate}</p>
+          <p>{item.cornQuantity}</p>
+          <p>{item.flourQuantity}</p>
+          <p>{item.orderNotes}</p>  
+        </div>
+      ))}
+    </div>
     </div>
   );
 }
+
+export default DriversOrders

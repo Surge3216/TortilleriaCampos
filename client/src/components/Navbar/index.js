@@ -62,8 +62,8 @@ export class Navbar extends Component {
     </div>
   </nav> */}
 
-  <ul id="nav-mobile" class="sidenav panel sidenav-fixed">
-    <li><div class="user-view">
+  <ul id="nav-mobile" className="sidenav panel sidenav-fixed">
+    <li><div className="user-view">
       <div>
         <h5 className="center-align">Tortilleria Campos</h5>
       </div>
@@ -99,9 +99,9 @@ export class Navbar extends Component {
                   Contact Us               
             </Link>
            </li>
-    <li><div class="divider"></div></li>
-    <li><a href="#name"><span class="white-text name subheader">User Name</span></a></li>
-    <li><a class="waves-effect" href="#!">Main Page</a></li>
+    <li><div className="divider"></div></li>
+    <li><a href="#name"><span className="white-text name subheader">User Name</span></a></li>
+    <li><a className="waves-effect" href="#!">Main Page</a></li>
     <li>
       <Link
           to="/driverorders"
@@ -131,7 +131,7 @@ export class Navbar extends Component {
               New Order
         </Link>
       </li>
-    <li><a class="waves-effect" href="#!">Add User</a></li>
+    <li><a className="waves-effect" href="#!">Add User</a></li>
   </ul>
 
       </div>

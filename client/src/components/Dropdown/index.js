@@ -53,7 +53,7 @@ export class Dropdown extends Component{
                 <p className="orderDetails">Address</p>
                 <p className="orderDetails">Due Date</p>
                 <p className="orderDetails">order:</p>
-                <a class="waves-effect waves-light btn" id="add-btn" >Done</a>
+                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
             </div>
         </li>
     </ul>
