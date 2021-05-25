@@ -1,6 +1,6 @@
 import { set } from "mongoose";
 import React, { useState, useEffect } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 
 export default function DriversOrders() {
   const [driverOrders, setDriverOrders] = useState([
@@ -23,3 +23,4 @@ export default function DriversOrders() {
       <h1>{driverOrders[0].orderNotes}</h1>
     </div>
   );
+}
