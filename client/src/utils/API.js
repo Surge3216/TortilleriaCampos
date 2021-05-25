@@ -25,4 +25,8 @@ export default {
     deleteClient: function(clientName){
         return axios.delete("/api/newclient/" + clientName)
     },
+
+    saveEmployee: function( employeeData){
+        return axios.post("/api/employee/", employeeData)
+    }
 };
