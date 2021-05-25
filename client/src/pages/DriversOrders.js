@@ -1,7 +1,7 @@
 import { set } from "mongoose";
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
-
+import Dropdown from "../components/Dropdown/index"
 export default function DriversOrders() {
   const [driverOrders, setDriverOrders] = useState([
     {
@@ -24,6 +24,7 @@ export default function DriversOrders() {
 
   return (
     <div>
+      <Dropdown />
       <h1>{driverOrders[0].userID}</h1>
       <h1>{driverOrders[0].orderStatus}</h1>
       <h1>{driverOrders[0].dueDate}</h1>
