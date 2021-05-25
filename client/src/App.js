@@ -12,6 +12,7 @@ import DriversOrders from "./pages/DriversOrders"
 import NewClient from "./pages/NewClient.js"
 import Order from "./pages/ClientOrder.js"
 import EmployeeContext from "./utils/employeeContext"
+import AddUser from "./pages/AddUser"
 
 class App extends Component{
 state= {
@@ -51,6 +52,7 @@ handleLogout= () =>{
         <Route exact path="/driverorders" component={DriversOrders}/>
         <Route exact path="/order" component={Order}/>
         <Route exact path="/newClient" component={NewClient}/>
+        <Route exact path="/addUser" component={AddUser}/>
         <Footer />
       </div>
       </EmployeeContext.Provider>
