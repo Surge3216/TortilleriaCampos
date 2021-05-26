@@ -35,7 +35,7 @@ export class Table extends Component {
             <tr>
               <td>7</td>
               <td>
-                  <div class="input-field col s12">
+                  <div className="input-field col s12">
                     <select>
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">Option 1</option>
@@ -51,11 +51,11 @@ export class Table extends Component {
               </table>
             <div className="row">
               <div className="Col l1">
-                < i class="material-icons">add</i>
+                < i className="material-icons">add</i>
               </div>
 
               <div className="col l2 offset-l10">
-                <a class="waves-effect waves-light btn-small">Submit</a>
+                <a className="waves-effect waves-light btn-small">Submit</a>
               </div>
             </div>
         </div>

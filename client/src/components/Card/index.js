@@ -11,10 +11,10 @@ export class Card extends Component{
         return(
         <EmployeeContext.Consumer>
             {({handleLogin})=>(
-                       <div class="row login">
-                       <div class="col l4 s12 m9 offset-m2 offset-l5 border">
-                         <div class="card-panel teal white">
-                               <div class="row">
+                       <div className="row login">
+                       <div className="col l4 s12 m9 offset-m2 offset-l5 border">
+                         <div className="card-panel teal white">
+                               <div className="row">
                                    <div>
                                        <h4 className="center-align bold">Login</h4>
                                    </div>

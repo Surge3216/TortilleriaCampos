@@ -9,9 +9,9 @@ export class Carousel extends Component{
     render(){
         return(
   <div>
-    <div class="row">
+    <div className="row">
       <div className="box col l11">
-    <img class="col mImg" src={image} href="#four!">
+    <img className="col mImg" src={image} href="#four!">
     </img>
     </div>
   </div>

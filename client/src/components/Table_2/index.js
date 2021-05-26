@@ -56,11 +56,11 @@ export class Table2 extends Component {
               </table>
             <div className="row">
               <div className="Col l1">
-                < i class="material-icons">add</i>
+                < i className="material-icons">add</i>
               </div>
 
               <div className="col l2 offset-l10">
-                <a class="waves-effect waves-light btn-small">Submit</a>
+                <a className="waves-effect waves-light btn-small">Submit</a>
               </div>
             </div>
         </div>

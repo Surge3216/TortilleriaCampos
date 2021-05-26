@@ -17,38 +17,38 @@ export class Dropdown extends Component{
             <div className="col l8 offset-l2">
 
 
-    <ul class="collapsible">
+    <ul className="collapsible">
     <li>
-            <div class="collapsible-header">
+            <div className="collapsible-header">
                 <p className="orderName">New Order</p>
             </div>
-            <div class="collapsible-body">
+            <div className="collapsible-body">
                 <p className="orderDetails">Restaurant Name</p>
                 <p className="orderDetails">Address</p>
                 <p className="orderDetails">Due Date</p>
                 <p className="orderDetails">order:</p>
-                <a class="waves-effect waves-light btn" id="add-btn" >Done</a>
+                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
             </div>
         </li>
         
         <li>
-            <div class="collapsible-header">
+            <div className="collapsible-header">
                 <p className="orderName">New Order</p>
             </div>
-            <div class="collapsible-body">
+            <div className="collapsible-body">
                 <p className="orderDetails">Restaurant Name</p>
                 <p className="orderDetails">Address</p>
                 <p className="orderDetails">Due Date</p>
                 <p className="orderDetails">order:</p>
-                <a class="waves-effect waves-light btn" id="add-btn" >Done</a>
+                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
             </div>
         </li>
 
         <li>
-            <div class="collapsible-header">
+            <div className="collapsible-header">
                 <p className="orderName">New Order</p>
             </div>
-            <div class="collapsible-body">
+            <div className="collapsible-body">
                 <p className="orderDetails">Restaurant Name</p>
                 <p className="orderDetails">Address</p>
                 <p className="orderDetails">Due Date</p>
