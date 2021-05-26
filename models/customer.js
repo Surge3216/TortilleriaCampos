@@ -18,7 +18,7 @@ const Schema = mongoose.Schema;
             type: String,
         },
         streetAddress: {
-            type: Number,
+            type: String,
         },
         streetAddressL2: {
             type: Number,
