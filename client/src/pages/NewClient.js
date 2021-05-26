@@ -22,6 +22,7 @@ function NewClient() {
 
     const handleFormSubmit=(event)=>{
         event.preventDefault()
+        console.log(event)
         API.saveClient(clients).then((res)=>console.log(res.data)).catch(err=> console.log(err))
     }
 
@@ -60,7 +61,7 @@ function NewClient() {
                         </div>
                         <div className="row">
                             <div class="col l1 offset-l9">
-                            <button onClick={()=> handleFormSubmit(clients)} class="waves-effect waves-light btn" id="add-btn" >Add</button>
+                            <button onClick={(event)=> handleFormSubmit(event)} class="waves-effect waves-light btn" id="add-btn" >Add</button>
                             </div>
                         </div>
                     </form>
