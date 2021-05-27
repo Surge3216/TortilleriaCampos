@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import m from 'materialize-css/dist/js/materialize'
+import M from 'materialize-css/dist/js/materialize'
 export class Table extends Component {
   componentDidMount(){
     document.addEventListener('DOMContentLoaded', function() {

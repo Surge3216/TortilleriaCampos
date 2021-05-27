@@ -19,7 +19,7 @@ function NewEmployee() {
 
     const handleFormSubmit=(event)=>{
         event.preventDefault()
-        API.saveEmployees(clients).then((res)=>console.log(res.data)).catch(err=> console.log(err))
+        API.saveEmployees(employees).then((res)=>console.log(res.data)).catch(err=> console.log(err))
     }
 
     return (
