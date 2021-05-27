@@ -13,10 +13,10 @@ export class Card extends Component{
             {({handleLogin})=>(
                        <div className="row login">
                        <div className="col l4 s12 m9 offset-m2 offset-l5 border">
-                         <div className="card-panel teal white">
+                         <div className="card-panel box">
                                <div className="row">
                                    <div>
-                                       <h4 className="center-align bold">Login</h4>
+                                       <h4 className=" hm center-align bold">Login</h4>
                                    </div>
                                </div>
                                <div className="row">
