@@ -12,7 +12,7 @@ function Contact() {
                     <h6>Phone: 801-347-8284</h6>
                     <h6>775 South 900 West</h6>
                     <h6>Salt Lake City, UT 84104</h6>
-                    <div class="card-panel teal white">
+                    <div class="card-panel white">
                     <Row>
                     <form className="col s12">
                         <div className="row">
