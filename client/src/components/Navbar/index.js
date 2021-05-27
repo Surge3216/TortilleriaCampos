@@ -101,7 +101,7 @@ export class Navbar extends Component {
            </li>
     <li><div className="divider"></div></li>
     <li><a href="#name"><span className="white-text name subheader">User Name</span></a></li>
-    <li><a className="waves-effect" href="#!">Main Page</a></li>
+    {/* <li><a className="waves-effect" href="#!">Main Page</a></li> */}
     <li>
       <Link
           to="/driverorders"
