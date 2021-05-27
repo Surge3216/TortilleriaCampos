@@ -22,7 +22,7 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 // app.use(passport.initialize());
 // app.use(passport.session());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tortilleria_campos", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://root:Kidsergg3216@sergio.xwvti.mongodb.net/tortilleria_campos?retryWrites=true&w=majority", { useNewUrlParser: true });
  
 //Add routes, both API and view
 app.use(routes);
