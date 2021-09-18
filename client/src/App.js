@@ -1,4 +1,4 @@
-import React, { Component, useState} from "react";
+import React, { Component} from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -6,7 +6,6 @@ import Login from "./pages/Login"
 import Story from "./pages/Story"
 import Contact from "./pages/Contact";
 import Carousel from "./components/Carousel/index"
-import row from "./components/Row/index"
 import Row from "./components/Row/index";
 import DriversOrders from "./pages/DriversOrders"
 import NewClient from "./pages/NewClient.js"
@@ -41,7 +40,7 @@ handleLogout= () =>{
       <div>
         <Navbar />
         <Row>
-          <div class="col l12 offset-l1">
+          <div className="col l12 offset-l1">
         <Carousel />
         </div>
         </Row>

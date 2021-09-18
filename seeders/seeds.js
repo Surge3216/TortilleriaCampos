@@ -86,27 +86,21 @@ var employeeSeed = [
 var ordersSeed = [
     {
         userID: "445533",
-        orderStatus: "next",
+        orderStatus: "Staging",
         dateCreated: "06/05/2021",
         deliveryDate: "06/05/2021",
-        dateClosed: "06/05/2021",
         orderNotes: "Bring me my tacos",
-        cornQuantity: "tons",
-        flourQuantity: "tons",
-        dueDate: "06/05/2021",
-        rate: "60000"
+        cornQuantity: 16,
+        flourQuantity: 4,
     },
     {
-        userID: "7878787",
-        orderStatus: "order up",
-        dateCreated: "06/06/2021",
-        deliveryDate: "06/06/2021",
-        dateClosed: "06/06/2021",
-        orderNotes: "I love tacos",
-        cornQuantity: "a little",
-        flourQuantity: "a little",
-        dueDate: "06/06/2021",
-        rate: "30000"
+      userID: "445533",
+      orderStatus: "Staging",
+      dateCreated: "06/05/2021",
+      deliveryDate: "06/05/2021",
+      orderNotes: "Bring me my tacos",
+      cornQuantity: 16,
+      flourQuantity: 4,
     }
 ]
 

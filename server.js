@@ -22,8 +22,19 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 // app.use(passport.initialize());
 // app.use(passport.session());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://root:Kidsergg3216@sergio.xwvti.mongodb.net/tortilleria_campos?retryWrites=true&w=majority", { useNewUrlParser: true });
- 
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tortilleria_campos", { useNewUrlParser: true });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://root:Kidsergg3216@sergio.xwvti.mongodb.net/tortilleria_campos?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose
+  .connect("mongodb+srv://Surge:VkRDVaB5K7BcuU3R@sergio.xwvti.mongodb.net/tortilleria_campos?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('MongoDB Connected');
+  })
+  .then((res) => {
+    console.log(`Server running`);
+  })
+  .catch(err => {
+    console.error(err)
+  })
 //Add routes, both API and view
 app.use(routes);
 

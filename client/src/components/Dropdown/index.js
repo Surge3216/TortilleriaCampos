@@ -1,67 +1,50 @@
 import React, { Component } from "react";
-import M from 'materialize-css/dist/js/materialize';
 import './style.css'
+import axios from "axios"
 
-export class Dropdown extends Component{
+class Dropdown extends Component{
 
-    componentDidMount()  {document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems, {});
-      });
+    constructor(props){
+        super(props)
+
+        this.state = {
+            post: []
+        }
     };
 
+    componentDidMount(){
+        axios.get("https://jsonplaceholder.typicode.com/posts")
+        .then(response => {
+            console.log(response)
+            this.setState({posts: response.data})
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
+
     render(){
+        const { posts } = this.state
+
         return(
-    <div>
-        <div className="row">
-            <div className="col 1">
+        <div>
 
-
-    <ul className="collapsible">
-    <li>
-            <div className="collapsible-header head">
-                <p className="orderName">New Order</p>
-            </div>
-            <div className="collapsible-body">
-                <p className="orderDetails">Restaurant Name</p>
-                <p className="orderDetails">Address</p>
-                <p className="orderDetails">Due Date</p>
-                <p className="orderDetails">order:</p>
-                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
-            </div>
-        </li>
-        
-        <li>
-            <div className="collapsible-header">
-                <p className="orderName">New Order</p>
-            </div>
-            <div className="collapsible-body">
-                <p className="orderDetails">Restaurant Name</p>
-                <p className="orderDetails">Address</p>
-                <p className="orderDetails">Due Date</p>
-                <p className="orderDetails">order:</p>
-                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
-            </div>
-        </li>
- 
-        <li>
-            <div className="collapsible-header">
-                <p className="orderName">New Order</p>
-            </div>
-            <div className="collapsible-body">
-                <p className="orderDetails">Restaurant Name</p>
-                <p className="orderDetails">Address</p>
-                <p className="orderDetails">Due Date</p>
-                <p className="orderDetails">order:</p>
-                <a className="waves-effect waves-light btn" id="add-btn" >Done</a>
-            </div>
-        </li>
-    </ul>
-            </div>
-        </div>
+        {
+            posts.length ?
+            posts.map(post => <div key={post.id}>{post.title}</div>) : null
+        }
     </div>
         )
     }
 }
 
 export default Dropdown;
+
+
+// import M from 'materialize-css/dist/js/materialize';
+
+    // componentDidMount()  {document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.collapsible');
+    //     var instances = M.Collapsible.init(elems, {});
+    //   });
+    // };

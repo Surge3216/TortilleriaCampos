@@ -14,13 +14,13 @@ const Schema = mongoose.Schema;
         phoneNumber: {
             type: Number,
         },
-        emailAddress: {
+        email: {
             type: String,
         },
         streetAddress: {
             type: String,
         },
-        streetAddressL2: {
+        streetAddress2: {
             type: Number,
         },
         city: {
@@ -33,8 +33,7 @@ const Schema = mongoose.Schema;
             type: Number,
         },
 	relationshipStatus: {
-	    type: String,
-        trim: true,
+	    type: Boolean
 	},
 	customerNotes: {
 	    type: String,

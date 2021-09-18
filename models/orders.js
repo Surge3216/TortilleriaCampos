@@ -9,14 +9,7 @@ const Schema = mongoose.Schema;
 	    orderStatus: {
             type: String,
         },
-        dateCreated: {
-            type: Date,
-            default: Date.now
-        },
         deliveryDate: {
-            type: Date,
-        },
-        dateClosed: {
             type: Date,
         },
         orderNotes: {
@@ -28,13 +21,6 @@ const Schema = mongoose.Schema;
         flourQuantity: {
             type: Number,
         },
-        dueDate: {
-            type: Date,
-        },
-        rate: {
-            type: Number,
-        }
-
     });
 
     const Orders = mongoose.model("Orders", ordersSchema);
