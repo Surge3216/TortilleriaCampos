@@ -15,7 +15,7 @@ export default function Card(){
                             <form className="col s12">
                                 <div className="row">
                                     <div className="input-field col l8 m8 s8 offset-l2 offset-m2 offset-s2">
-                                        <input placeholder="email" id="user_name" ref={this.userName} type="text" class="validate"></input>
+                                        <input placeholder="email" id="user_name" type="text" class="validate"></input>
                                     </div>
                                 </div>
                                 <div className="row">
