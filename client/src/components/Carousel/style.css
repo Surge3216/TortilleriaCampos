@@ -4,3 +4,16 @@
     object-fit: cover;
 
 }
+.he{
+    background-image: url('https://www.seriouseats.com/thmb/5Q8L8TMuSonJvRIgptDH61SOtes=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__10__20201029-northern-mexican-style-tortillas-jillian-atkinson-1-2-d3070b3723b14403a402ec489cf846fb.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container {
+    padding-left: 170px;
+    max-width: 1000px;
+    width: 100% !important;
+  }

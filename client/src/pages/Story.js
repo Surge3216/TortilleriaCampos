@@ -1,12 +1,8 @@
 import React from 'react';
-import Row from '../components/Row/index';
-import Col from '../components/Col/index'
 
 function Story() {
     return (
-        <div>
-
-            <Row>
+        <div class="container">
                 <div className="col l4 offset-l3">
                 <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
@@ -37,7 +33,6 @@ function Story() {
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
             </p>
             </div>
-            </Row>
             
         </div>
     )

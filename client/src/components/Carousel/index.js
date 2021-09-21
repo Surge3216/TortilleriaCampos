@@ -1,23 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
-import M from 'materialize-css/dist/js/materialize';
-import image from "./Tortillas_de_maiz_blanco_(México)_01 (1).jpg";
-import Row from "../Row/index"
 
-export class Carousel extends Component{
+export default function Navbar() {
 
-    render(){
-        return(
-  <div>
-    <div className="row">
-      <div className="box col l11">
-    <img className="col mImg" src={image} href="#four!">
-    </img>
-    </div>
-  </div>
-            </div>
-        )
-    }
+    return (
+      <div>
+        <div className="he" style={{height: "50%"}}> 
+        </div>
+      </div>
+    )
 };
-
-export default Carousel;

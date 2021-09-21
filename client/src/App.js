@@ -6,44 +6,20 @@ import Login from "./pages/Login"
 import Story from "./pages/Story"
 import Contact from "./pages/Contact";
 import Carousel from "./components/Carousel/index"
-import Row from "./components/Row/index";
 import DriversOrders from "./pages/DriversOrders"
 import NewClient from "./pages/NewClient.js"
 import Order from "./pages/ClientOrder.js"
-import EmployeeContext from "./utils/employeeContext"
 import AddUser from "./pages/AddUser"
 
 class App extends Component{
-state= {
-  employeeName: "",
-  employeeType: "",
-  isLoggedIn:"",
 
-}
-handleLogin= (userName, password) =>{
-  alert(userName)
-  this.setState({
-    isLoggedIn: true
-  })
-}
-
-handleLogout= () =>{
-  this.setState({
-    isLoggedIn: false, employeeName: "", employeeType: ""
-  })
-}
   render() {
   return (
     <Router>
-      <EmployeeContext.Provider value={{...this.state, handleLogin: this.handleLogin, handleLogout: this.handleLogout}}>
-
+  
       <div>
         <Navbar />
-        <Row>
-          <div className="col l12 offset-l1">
-        <Carousel />
-        </div>
-        </Row>
+        <Carousel/>
         <Route exact path="/" component={Story}/>
         <Route exact path="/story" component={Story} />
         <Route exact path="/login" component={Login} />
@@ -54,7 +30,6 @@ handleLogout= () =>{
         <Route exact path="/addUser" component={AddUser}/>
         <Footer />
       </div>
-      </EmployeeContext.Provider>
     </Router>
 
   );
