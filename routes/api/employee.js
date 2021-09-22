@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const passport = require("../../config/passport");
 const employeeController = require("../../controllers/employeeController")
 
 router.route("/")

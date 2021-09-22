@@ -34,19 +34,19 @@ module.exports = {
     },
     login: function(req, res){
         db.Employee
-        .findOne({emailAddress: req.body.email})
+        .findOne({email: req.body.email})
         .then(dbModel => {
             if (dbModel.password === req.body.password){
                 let tempObject = {
-                   authenicated:true,
-                   employeeName:dbModel.employeeName,
-                   employeeType:dbModel.employeeType
+                   authenticated: true,
+                   name: dbModel.name,
+                   employeeType: dbModel.employeeType
                 }
                 res.json(tempObject)
             }
             else {
                 let tempObject = {
-                    authenicated: false,
+                    authenticated: false,
                 }
                 res.status(401).json(tempObject)
             }
