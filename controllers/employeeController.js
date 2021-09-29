@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken')
 const db = require("../models");
 
 module.exports = {
@@ -33,28 +34,47 @@ module.exports = {
           .catch(err => res.status(422).json(err))
     },
     login: function(req, res){
-        db.Employee
-        .findOne({email: req.body.email})
-        .then(dbModel => {
-            if (dbModel.password === req.body.password){
-                let tempObject = {
-                   authenticated: true,
-                   name: dbModel.name,
-                   employeeType: dbModel.employeeType
-                }
-                res.json(tempObject)
+        let getEmployee;
+        db.Employee.findOne({
+            email: req.body.email
+        })
+        .then((employee)=>{
+            if(!employee) {
+                return res.status(401).json({
+                    message: 'Authentication failed'
+                });
             }
-            else {
-                let tempObject = {
-                    authenticated: false,
-                }
-                res.status(401).json(tempObject)
+            getEmployee = employee;
+            return (req.body.password === employee.password)
+        })
+        .then((response)=>{
+            if (!response){
+                return res.status(401).json({
+                    message: 'Authentication failed'
+                });
             }
-            })        
-
-            
-        .catch(err => res.status(422).json(err))
-
+            let jwttoken = jwt.sign(
+                {
+                    email: getEmployee,
+                    userId: getEmployee._id,
+                    role: getEmployee.role 
+                },
+                'my-long-secret',
+                {
+                    expiresIn: '1h'
+                }
+            );
+            res.status(200).json({
+                token: jwttoken,
+                expiresIn: 1000,
+                msg: getEmployee
+            })
+            .catch((err) => {
+                return res.status(401).json({
+                    message: 'Authentication failed',
+                });
+            });
+        })
     }
 }
 
