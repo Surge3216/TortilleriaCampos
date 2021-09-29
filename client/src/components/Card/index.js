@@ -1,10 +1,11 @@
-import React, { createContext } from 'react';
+import React, { useContext } from 'react';
 import { useForm } from '../../utils/hooks';
 import { UserContext } from '../../context/auth';
 import axios from "axios";
 import "./style.css";
 
 export default function Card() {
+    const context = useContext(UserContext);
     
     const { onChange, onSubmit, values } = useForm(loginUserCallback, {
         email: '',
@@ -19,7 +20,9 @@ export default function Card() {
         }
         axios.post('/api/employee/login', userData)
         .then(function(response){
-            createContext(response.data)
+            const userInfo = response.data
+            context.login(userInfo)
+            
         })
     }
 

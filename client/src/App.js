@@ -2,6 +2,7 @@ import React, { Component} from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { AuthProvider } from "./context/auth";
 import Login from "./pages/Login"
 import Story from "./pages/Story"
 import Contact from "./pages/Contact";
@@ -15,6 +16,7 @@ class App extends Component{
 
   render() {
   return (
+    <AuthProvider>
     <Router>
   
       <div>
@@ -31,7 +33,7 @@ class App extends Component{
         <Footer />
       </div>
     </Router>
-
+    </AuthProvider>
   );
 }
 }

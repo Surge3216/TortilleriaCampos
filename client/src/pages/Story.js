@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext} from 'react';
+import { UserContext } from "../context/auth"
+
 
 function Story() {
+  const { user } = useContext(UserContext)
+console.log(user.email)
     return (
         <div class="container">
                 <div className="col l4 offset-l3">
-                <p>
+               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
               parturient montes, nascetur ridiculus mus. Pellentesque et dui id justo finibus
@@ -31,7 +35,7 @@ function Story() {
               volutpat nisl. Ut et turpis non nunc maximus mollis a vitae tortor. Pellentesque
               mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
-            </p>
+            </p> 
             </div>
             
         </div>
