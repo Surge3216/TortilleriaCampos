@@ -55,6 +55,7 @@ module.exports = {
             }
             let jwttoken = jwt.sign(
                 {
+                    username: getEmployee.name,
                     email: getEmployee.email,
                     userId: getEmployee._id,
                     role: getEmployee.role 

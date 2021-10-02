@@ -8,9 +8,9 @@ import Story from "./pages/Story"
 import Contact from "./pages/Contact";
 import Carousel from "./components/Carousel/index"
 import DriversOrders from "./pages/DriversOrders"
-import NewClient from "./pages/NewClient.js"
+import NewClient from "./pages/NewClient.jsx"
 import Order from "./pages/ClientOrder.js"
-import AddUser from "./pages/AddUser"
+import AddUser from "./pages/AddUser.jsx"
 
 class App extends Component{
 

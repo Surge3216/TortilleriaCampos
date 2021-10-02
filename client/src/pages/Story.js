@@ -4,10 +4,9 @@ import { UserContext } from "../context/auth"
 
 function Story() {
   const { user } = useContext(UserContext)
-console.log(user.email)
     return (
         <div class="container">
-                <div className="col l4 offset-l3">
+              <div className="col l4 offset-l3">
                <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
