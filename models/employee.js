@@ -18,6 +18,18 @@ const Schema = mongoose.Schema;
         email: {
             type: String,
         },
+        state: {
+            type: String
+        },
+        city: {
+            type: String
+        },
+        zip: {
+            type: String
+        },
+        address: {
+            type: String
+        },
         employeeStatus: {
             type: String,
             trim: true

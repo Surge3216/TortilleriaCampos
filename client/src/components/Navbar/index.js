@@ -76,8 +76,7 @@ const { user } = useContext(UserContext)
         </li>
         <li>
           <Link
-            to="/addUser"
-            className={window.location.pathname === "/addUser"}>
+            to="/addUser">
             Add User
           </Link>
         </li>

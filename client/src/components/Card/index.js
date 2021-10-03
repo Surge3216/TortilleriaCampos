@@ -32,31 +32,31 @@ export default function Card() {
 
     return (
         <div className=" container">
-            <div class="row">
-                <div class="col s12 m6 l8 offset-l2">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title"></span>
-                            <div class="row">
-                                <div class="input-field col s8 offset-l2 l8">
+            <div className="row">
+                <div className="col s12 m6 l8 offset-l2">
+                    <div className="card">
+                        <div className="card-content">
+                            <span className="card-title"></span>
+                            <div className="row">
+                                <div className="input-field col s8 offset-l2 l8">
                                     <input id="email" name="email"
                                         type="email"
                                         value={values.email}
                                         onChange={onChange} />
-                                    <label for="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s8 offset-l2 l8">
+                            <div className="row">
+                                <div className="input-field col s8 offset-l2 l8">
                                     <input id="password" name="password"
                                         type="password"
                                         value={values.password}
                                         onChange={onChange} />
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s8 offset-l2 l8">
+                            <div className="row">
+                                <div className="input-field col s8 offset-l2 l8">
                                     <button className=" btn offset-l2 col l8" onClick={onSubmit}> Login</button>
                                 </div>
                             </div>

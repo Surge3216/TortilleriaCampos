@@ -11,17 +11,14 @@ const Schema = mongoose.Schema;
             type: String,
             allowNull: false,
         },
-        phoneNumber: {
+        phone: {
             type: Number,
         },
         email: {
             type: String,
         },
-        streetAddress: {
+        address: {
             type: String,
-        },
-        streetAddress2: {
-            type: Number,
         },
         city: {
             type: String,
@@ -29,14 +26,18 @@ const Schema = mongoose.Schema;
         state: {
             type: String,
         },
-        zipCode: {
+        zip: {
             type: Number,
         },
 	relationshipStatus: {
-	    type: Boolean
+	    type: String
 	},
 	customerNotes: {
 	    type: String,
+	},
+    orders: {
+	    type: Array,
+        default: [],
 	}
     });
 

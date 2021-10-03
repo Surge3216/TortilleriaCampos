@@ -5,7 +5,7 @@ import { UserContext } from "../context/auth"
 function Story() {
   const { user } = useContext(UserContext)
     return (
-        <div class="container">
+        <div className="container">
               <div className="col l4 offset-l3">
                <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id

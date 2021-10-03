@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
     const ordersSchema = new Schema({
         userID: {
-            type: Number,
+            type: String,
         },
 	    orderStatus: {
             type: String,
